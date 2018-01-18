@@ -1,0 +1,314 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+        <link rel="stylesheet" href="css/theme/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal" style="background-color: #fff;">
+			<div class="slides" >
+                    <section data-background-video="bgm.mp4" data-background-video-loop  data-background-video-muted style="text-align: left;">
+<h2 style="color: white">Python Programming</h2>
+<h5 style="color: white">Lecture 1 Introduction</h5>
+    				</section>
+
+    			<section>
+                    <section data-background="#2980b9" style="color: white">
+<h2 style="color: white">1.1 Course Intro</h2>
+<ul>
+    <li>This is a basic course for Python programming.</li>
+    <li>“Life is short, you need Python.”<p>by Bruce Eckel, ANSI C++ Comitee member</p></li>
+</ul>
+    				</section>
+    				
+                    <section>
+<ul>
+    <li class="fragment">什么是计算机“语言”？</li>
+    <li class="fragment">什么是编程？</li>
+    <li class="fragment">有很多程序设计语言,比如C，Java，Basic等等</li>
+    <li class="fragment">为什么要学Python？
+        <ul>
+            <li class="fragment">原因一：高级 （简单）</li>
+            <li class="fragment">原因二：普及</li>
+            <li class="fragment">原因三：强大</li>
+        </ul></li>
+</ul>
+                    </section>
+
+    				<section>
+<h3>这门课主要涉及3个板块</h3>
+<ul>
+    <li class="fragment">基本语言</li>
+    <li class="fragment">数据分析</li>
+    <li class="fragment">算法，数据结构，其他内容</li>
+</ul>
+
+    				</section>
+    				<section>
+<h3>课程要求</h3>  
+<ol>
+    <li>每周作业（2%*10=20%）</li>
+    <li>案例设计：个人财务分析 （10%）</li>
+    <li>期中期末考试 （30%*2=60%）</li>
+    <li>出勤率 (10%)，课堂参与（Bonus）</li>
+    <li>答疑时间,网上论坛github（gayhub）</li>
+    <li>联系方式
+        <ul>
+            <li>邮箱： wang.lu@mail.shufe.edu.cn</li>
+            <li>办公室：国际工商管理学院412室</li>
+        </ul></li>
+</ol>
+
+    				</section>
+    				<section>
+<h3>主要教材</h3>
+<div id="leftc"><img data-src="textbook4.jpg" style="height: 350pt" ></div><div id="rightc"><img data-src="textbook1.jpg" style="height: 350pt"></div>
+    				</section>
+    				<section>
+<h3>参考教材</h3>
+<div id="leftc"><img data-src="textbook3.jpg" style="height: 350pt" ></div><div id="rightc"><img data-src="textbook2.jpg" style="height: 350pt"></div>
+    				</section>
+    				<section>
+<h3>课件从哪里获取？</h3>
+<ul>
+     <li>我的网站：<a href="https://wangwanglulu.coding.me">wangwanglulu.coding.me</a></li>
+</ul>                        
+    				</section>
+    			</section>
+    			<section>
+                    <section data-background="#2980b9" style="color: white">
+<h2 style="color: white">1.2 Python Intro</h2>
+<ul>
+    <li>Python的简史，特色和安装</li>
+</ul>
+                    </section>
+					<section style="text-align: left">
+<h3>Python历史</h3>                        
+<p>Python的创始人为吉多·范罗苏姆（Guido van Rossum）。1989年的圣诞节期间，吉多·范罗苏姆为了在阿姆斯特丹打发时间，决心开发一个新的脚本解释程序，作为ABC语言的一种继承。之所以选中Python作为程序的名字，是因为他是BBC电视剧——蒙提·派森的飞行马戏团（Monty Python's Flying Circus）的爱好者。</p>
+<p>出自Wikipedia的<a href="https://zh.wikipedia.org/wiki/Python#.E6.AD.B7.E5.8F.B2">Python</a></p> 	
+    				</section>
+    				<section style="text-align: left;">
+<h3>Python的特色</h3>
+<p>Python的设计哲学是“优雅”，“明确”，“简单”。Python开发者的哲学是“用一种方法，最好是只有一种方法来做一件事”。</p>
+<p>出自Wikipedia的<a href="https://zh.wikipedia.org/wiki/Python#.E6.AD.B7.E5.8F.B2">Python</a></p> 	
+    				</section>
+    				<section>
+<h3>废话不多说，上手试一下 </h3>                        	
+    				</section>			 
+    				<section>
+<h3>Python的安装</h3>
+<ul>
+    <li>请使用Python 3.x (很多教材是2.x版本)</li>
+    <li><a href="https://www.anaconda.com/download/">Anaconda</a></li>
+    <li>实际演示：第一个Python程序<pre style="font-size: 0.77em"><code class="hljs" data-trim contenteditable >
+print("Hello, world!")
+            </code></pre></li>
+</ul>
+                    </section>
+    			</section>
+    			<section>
+					<section data-background="#2980b9" style="color: white">
+<h2>1.3 程序设计的一些准则</h2>
+<ul>
+    <li>怎么把Python学好？</li>
+</ul>
+    				</section>
+    				<section>
+<h3>一些建议</h3>
+<ol>
+    <li>初学者要勤写注释</li>
+    <li>遇到困难，自己查资料找办法解决问题</li>
+    <li>搞清楚需求，解决问题最重要</li>
+    <li>尽量写容易看明白的代码，尽量写少的代码</li>
+    <li>不要复制粘贴，一个字一个字的敲</li>
+</ol>
+    				</section>
+    				<section>
+<h3 >注意几点</h3>
+<ol >
+    <li>不要沉迷炫技</li>
+    <li>初学者不用太在意速度</li>
+    <li>不要参与网上无意义的争论</li>
+    <li>不要高估自己写的代码</li>
+</ol>
+<p class="fragment"><img  data-src="000.jpg" height="300"></p>
+<p class="fragment">图片来自<a href="https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/001431608990315a01b575e2ab041168ff0df194698afac000">廖雪峰的官方网站</a></p>
+    				</section>
+                    <section>
+<h3>最后请各位记住一点。。。</h3>                        
+                    </section>
+                    <section>
+<ul>
+    <li>编程终究只是“术”，是解决问题的工具</li>
+    <li>这是你必须掌握的技巧，不是你追求的终极目标</li>
+    <li>你的思考和创造力是最重要的</li>
+</ul>
+                    </section>
+                    <section>
+<h3>还有一点很遗憾。。。</h3>
+<h3 class="fragment">即使学会了这门课，你还是不会“修电脑”。</h3>                        
+                    </section>    				
+    			</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+                // The "normal" size of the presentation, aspect ratio will be preserved
+    // when the presentation is scaled to fit different resolutions. Can be
+    // specified using percentage units.
+    width: 960,
+    height: 700,
+
+    // Factor of the display size that should remain empty around the content
+    margin: 0.1,
+
+    // Bounds for smallest/largest possible scale to apply to content
+    minScale: 0.2,
+    maxScale: 1.5,
+
+				// Display controls in the bottom right corner
+	controls: true,
+
+	// Display a presentation progress bar
+	progress: true,
+
+	// Set default timing of 2 minutes per slide
+	defaultTiming: 120,
+
+	// Display the page number of the current slide
+	slideNumber: true,
+
+	// Push each slide change to the browser history
+	history: false,
+
+	// Enable keyboard shortcuts for navigation
+	keyboard: true,
+
+	// Enable the slide overview mode
+	overview: true,
+
+	// Vertical centering of slides
+	center: true,
+
+	// Enables touch navigation on devices with touch input
+	touch: true,
+
+	// Loop the presentation
+	loop: false,
+
+	// Change the presentation direction to be RTL
+	rtl: false,
+
+	// Randomizes the order of slides each time the presentation loads
+	shuffle: false,
+
+	// Turns fragments on and off globally
+	fragments: true,
+
+	// Flags if the presentation is running in an embedded mode,
+	// i.e. contained within a limited portion of the screen
+	embedded: false,
+
+	// Flags if we should show a help overlay when the questionmark
+	// key is pressed
+	help: true,
+
+	// Flags if speaker notes should be visible to all viewers
+	showNotes: false,
+
+	// Global override for autolaying embedded media (video/audio/iframe)
+	// - null: Media will only autoplay if data-autoplay is present
+	// - true: All media will autoplay, regardless of individual setting
+	// - false: No media will autoplay, regardless of individual setting
+	autoPlayMedia: null,
+
+	// Number of milliseconds between automatically proceeding to the
+	// next slide, disabled when set to 0, this value can be overwritten
+	// by using a data-autoslide attribute on your slides
+	autoSlide: 0,
+
+	// Stop auto-sliding after user input
+	autoSlideStoppable: true,
+
+	// Use this method for navigation when auto-sliding
+	autoSlideMethod: Reveal.navigateNext,
+
+	// Enable slide navigation via mouse wheel
+	mouseWheel: false,
+
+	// Hides the address bar on mobile devices
+	hideAddressBar: true,
+
+	// Opens links in an iframe preview overlay
+	previewLinks: false,
+
+	// Transition style
+	transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+	// Transition speed
+	transitionSpeed: 'default', // default/fast/slow
+
+	// Transition style for full page slide backgrounds
+	backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
+
+	// Number of slides away from the current that are visible
+	viewDistance: 3,
+
+	// Parallax background image
+	parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+	// Parallax background size
+	parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
+
+	// Number of pixels to move the parallax background per slide
+	// - Calculated automatically unless specified
+	// - Set to 0 to disable movement along an axis
+	parallaxBackgroundHorizontal: null,
+	parallaxBackgroundVertical: null,
+
+	// The display mode that will be used to show slides
+	display: 'block',
+
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					// Zoom in and out with Alt+click
+		            { src: 'plugin/zoom-js/zoom.js', async: true },
+
+		            // Speaker notes
+					{ src: 'plugin/notes/notes.js', async: true },
+
+					// MathJax
+					{ src: 'plugin/math/math.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
