@@ -121,6 +121,7 @@
     <li>实际演示：第一个Python程序<pre style="font-size: 0.77em"><code class="hljs" data-trim contenteditable >
 print("Hello, world!")
             </code></pre></li>
+     <li>两种模式</li>
 </ul>
                     </section>
     			</section>
@@ -167,6 +168,381 @@ print("Hello, world!")
 <h3 class="fragment">即使学会了这门课，你还是不会“修电脑”。</h3>                        
                     </section>    				
     			</section>
+<section>
+	<section data-background="#2980b9" style="color: white">
+<h2 style="color: white">1.4 Values</h2>
+                    </section>
+<section>
+<h3>Three types of values</h3>
+<ul>
+	<li>Integer</li>
+	<ul>
+		<li>e.g., $1,2,15,-10$</li>
+	</ul>
+	<li>Float</li>
+	<ul>
+		<li>numbers with decimal point, e.g., $1.2, -3.8$.</li>
+		<li>for large or small numbers, </li>
+		<li>$5.91\times10^{10}=5.91e10$, $0.00233=2.33e-3$.</li>
+	</ul>
+	<li>String</li>
+	<ul>
+		<li>e.g., 'happy'</li>
+	</ul>
+</ul>
+
+</section>
+<section>
+<p>Python can tell you what type a value has.</p>	
+<pre style="font-size: 0.77em"><code class="hljs" data-trim contenteditable >
+>>> type(4)
+int
+
+>>> type('Hello, World!')
+str
+
+>>> type(3.2)
+float
+</code></pre>
+<div class="fragment">
+<b>Note: If numbers are in quotation marks, they are strings.</b>
+<pre style="font-size: 0.77em"><code class="hljs" data-trim contenteditable >
+>>> type('17')
+str
+
+>>> type('3.2')
+str
+</code></pre>	
+
+</div>
+
+</section>
+<section>
+	<h3>Escape string</h3>
+<pre style="font-size: 0.77em"><code class="hljs" data-trim contenteditable >
+>>> print('happy')
+happy
+</code></pre>
+<div class="fragment">
+	<p>If we want to print the single quotation marks?</p>
+<pre style="font-size: 0.77em"><code class="hljs" data-trim contenteditable >
+>>> print("'happy'")
+'happy'
+</code></pre>
+</div>
+
+<div class="fragment">
+	<p>If we want to print the double quotation marks?</p>
+<pre style="font-size: 0.77em"><code class="hljs" data-trim contenteditable >
+>>> print('\"happy\"')
+"happy"
+</code></pre>
+</div>
+
+
+
+<div class="fragment">
+	<p>If we want to print the slash?</p>
+<pre style="font-size: 0.77em"><code class="hljs" data-trim contenteditable >
+>>> print('\\happy\\')
+\happy\
+</code></pre>
+</div>
+
+
+</section>
+
+<section>
+
+<p>If we want to print the double slashes?</p>
+<pre style="font-size: 0.77em"><code class="hljs" data-trim contenteditable >
+>>> print(r'\\happy\\')
+\\happy\\
+</code></pre>
+
+<div class="fragment">
+	<p>Line break</p>
+<pre style="font-size: 0.77em"><code class="hljs" data-trim contenteditable >
+>>> print('I\'m learning\nPython.')
+I'm learning
+Python.
+</code></pre>
+</div>
+
+
+<div class="fragment"><p>Tab</p>
+<pre style="font-size: 0.77em"><code class="hljs" data-trim contenteditable >
+>>> print('I\'m learning\tPython.')
+I'm learning	Python.
+</code></pre></div>
+
+<div class="fragment">
+	<p>Please check the attachment 1 for more about escape string.</p>
+</div>
+
+</section>
+
+</section>
+    <section>
+<section data-background="#2980b9" style="color: white">
+<h2 style="color: white">1.5 Variables</h2>
+</section>
+<section>
+	<ul>
+		<li><p>A variable is a name that refers to a value.</p></li>
+		<li><p class="fragment">An assignment statement creates new variables and gives them values.</p></li>
+		<div class="fragment">
+<pre><code class="hljs" data-trim contenteditable >
+>>> message = 'And now for something completely different'
+>>> n = 17
+>>> pi = 3.1415926535897931
+</code></pre>
+		</div>
+		<li><p class="fragment">To display the value of a variable, you can use a print statement.</p></li>
+		<div class="fragment">
+<pre><code class="hljs" data-trim contenteditable >
+>>> print(n)
+17
+>>> print(pi)
+3.141592653589793
+</code></pre>
+		</div>
+<li><p class="fragment">The type of a variable is the type of the value it refers to.</p></li>
+<div class="fragment">
+<pre><code class="hljs" data-trim contenteditable >
+>>> type(message)
+str
+>>> type(n)
+int
+>>> type(pi)
+float
+</code></pre></div>
+	</ul>
+</section>
+<section>
+	<ul>
+		<li style="color:red"><p class="fragment">Note that $=$ means "assignment", not equation.</p></li>
+		<div class="fragment">
+<pre><code class="hljs" data-trim contenteditable >
+>>> x = 15
+>>> x = x + 10
+</code></pre></div>
+		<li><p class="fragment">Python is a Dynamically Typed Language. What is Dynamically Typed Language?</p> </li>
+				<div class="fragment">
+<pre><code class="hljs" data-trim contenteditable >
+>>> apple = 123 # apple is an integer
+>>> print(a)
+123
+</code></pre></div>
+
+				<div class="fragment">
+<pre><code class="hljs" data-trim contenteditable >
+>>> apple = 'ABC' # Now apple turns to be a string
+>>> print(a)
+ABC
+</code></pre></div>
+<li><p class="fragment">We can assign the value of a variable to another variable.</p></li>
+<div class="fragment">
+<pre><code class="hljs" data-trim contenteditable >
+>>> a = 'ABC'
+>>> b = a
+>>> print(b)
+ABC
+</code></pre></div>
+	</ul>
+	
+</section>
+<section>
+	<h3>Variable name</h3>
+	<ul>
+		<li> <p class="fragment">Variable names can be arbitrarily long. They are case sensitive.</p></li>
+		<li> <p class="fragment">You <b>cannot</b> start with a number.</p></li>
+		<li><p class="fragment">It is common to use underscore character $\_$.</p></li>
+		<li>
+			<p class="fragment">Illegal name</p>
+		</li>
+	<div class="fragment">
+<pre><code class="hljs" data-trim contenteditable >
+>>> 76trombones = 'big parade'
+SyntaxError: invalid syntax
+>>> more@ = 1000000
+SyntaxError: invalid syntax
+>>> class = 'Advanced Theoretical Zymurgy'
+SyntaxError: invalid syntax
+</code></pre></div>
+		</ul>
+</section>
+<section>
+	<h3>Keywords</h3>
+	<p>You <b>cannot</b> use the following keyword as variable names since they have been reserved by Python to recognize the structure of the program.</p>
+		<div class="fragment">
+<pre><code class="hljs" data-trim contenteditable >
+and del from None True
+as elif global nonlocal try
+assert else if not while
+break except import or with
+class False in pass yield
+continue finally is raise
+def for lambda return
+</code></pre></div>
+</section>
+<section>
+	<p>You would be better to use recognizable names. Check the following names.</p>
+			<div class="fragment">
+<pre><code class="hljs" data-trim contenteditable >
+a = 35.0
+b = 12.50
+c = a * b
+print(c)
+</code></pre></div>		
+
+<div class="fragment">
+<pre><code class="hljs" data-trim contenteditable >
+hours = 35.0
+rate = 12.50
+pay = hours * rate
+print(pay)
+</code></pre></div>
+
+<div class="fragment">
+<pre><code class="hljs" data-trim contenteditable >
+x1q3z9ahd = 35.0
+x1q3z9afd = 12.50
+x1q3p9afd = x1q3z9ahd * x1q3z9afd
+print(x1q3p9afd)
+</code></pre></div>
+<p class="fragment">Which ones are better?</p>
+</section>
+    </section>
+<section>
+	<section data-background="#2980b9" style="color: white">
+<h2 style="color: white">1.6 Operators and IO</h2>
+	</section>
+<section>
+<ul>
+	<li>
+		<p class="fragment">Operatiors: $+,-,*,/,**(exponentiation)$</p>
+	</li>
+	<div class="fragment">
+<pre><code class="hljs" data-trim contenteditable >
+>>> minute=50
+>>> minute/20
+2.5 #float
+</code></pre></div>
+
+	<div class="fragment">
+<pre><code class="hljs" data-trim contenteditable >
+>>> minute=50
+>>> minute//20 
+2 #floored integer
+</code></pre></div>
+
+	<div class="fragment">
+<pre><code class="hljs" data-trim contenteditable >
+>>> minute=50
+>>> minute%20 
+10 #remainder. This is useful!
+</code></pre></div>
+	<li>
+		<p class="fragment">Order of operations</p>
+	</li>
+	<li>
+		<p class="fragment">String operations</p>
+	</li>
+		<div class="fragment">
+<pre><code class="hljs" data-trim contenteditable >
+>>> first=10
+>>> second=15
+>>> print(first+second)
+25
+>>> first='100'
+>>> second='150'
+>>> print(first + second)
+100150
+</code></pre></div>
+</ul>
+</section>
+<section>
+	<h3>Input and Output</h3>
+	<ul>
+		<li>
+			<p class="fragment">input() and print()</p>
+		</li>
+				<div class="fragment">
+<pre><code class="hljs" data-trim contenteditable >
+>>> input = input()
+Some silly stuff
+>>> print(input)
+Some silly stuff
+</code></pre></div>
+		<li>
+			<p class="fragment">You can pass a string to input to be displayed to the user before pausing for input:</p>
+		</li>
+		<div class="fragment">
+<pre><code class="hljs" data-trim contenteditable >
+>>> name = input('What is your name?\n')
+What is your name?
+Chuck 
+>>> print(name)
+Chuck #The type is string.
+</code></pre></div>
+
+	</ul>
+
+</section>
+
+<section>
+	<ul>
+			<li>
+			<p class="fragment">If you expect the user to type an integer, you can try to convert the return value to integer using the int() function</p>
+		</li>
+				<div class="fragment">
+<pre><code class="hljs" data-trim contenteditable >
+>>> prompt = 'What...is the airspeed velocity of an unladen swallow?\n'
+>>> speed = input(prompt)
+What...is the airspeed velocity of an unladen swallow?
+17
+>>> int(speed)
+17
+>>> int(speed) + 5
+22
+</code></pre></div>
+<li>
+	<p class="fragment">It may cause error, if the value cannot be converted.</p>
+</li>
+
+				<div class="fragment">
+<pre><code class="hljs" data-trim contenteditable >
+>>> speed = input(prompt)
+What...is the airspeed velocity of an unladen swallow?
+What do you mean, an African or a European swallow?
+>>> int(speed)
+ValueError: invalid literal for int() with base 10:
+</code></pre></div>
+</ul>
+
+</section>
+</section>
+
+<section>
+		<section data-background="#2c3e50" style="color: white; text-align: left;">
+<h2 style="color: white">Summary</h2>
+<ul>
+	<li>Course intro</li>
+	<li>Python intro</li>
+	<li>Tips for programming</li>
+	<li>Values, variables, operators, input and output</li>
+	<ul class="fragment">
+	<li>Reading: Chapter 2 Debugging, 课外阅读材料</li>
+	<li>Homework: </li>
+</ul>
+</ul>
+
+
+
+                    </section>
+</section>
+
 			</div>
 		</div>
 
