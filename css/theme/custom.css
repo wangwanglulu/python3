@@ -26,3 +26,18 @@
     width: 50%;
 }
 
+#leftm {
+    padding: 0 1%;
+    text-align: left;
+    float: left;
+    width: 60%;
+    z-index: -10;
+}
+#rightm {
+    padding: 0 1%;
+    float: right;
+    text-align: left;
+    z-index: -10;
+    width: 35%;
+}
+
