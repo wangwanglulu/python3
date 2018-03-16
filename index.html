@@ -941,7 +941,7 @@ print(alien_0)
                     </ul>
                     <div class="fragment">
                         <pre><code class="hljs" data-trim contenteditable>
-lien_0 = {}
+alien_0 = {}
 alien_0['color'] = 'green'
 alien_0['points'] = 5
 print(alien_0)
@@ -972,14 +972,14 @@ The alien is now yellow.
 alien_0 = {'x_position': 0, 'y_position': 25, 'speed': 'medium'}
 print("Original x-position: " + str(alien_0['x_position']))
 
-u if alien_0['speed'] == 'slow':
+if alien_0['speed'] == 'slow':
     x_increment = 1
 elif alien_0['speed'] == 'medium':
     x_increment = 2
 else:
     x_increment = 3
 
-v alien_0['x_position'] = alien_0['x_position'] + x_increment
+alien_0['x_position'] = alien_0['x_position'] + x_increment
 print("New x-position: " + str(alien_0['x_position']))
 
 Original x-position: 0
@@ -1028,10 +1028,10 @@ Sarah's favorite language is C.
                     <div class="fragment">
                         <pre><code class="hljs" data-trim contenteditable>
 user_0 = {
-'username': 'efermi',
-'first': 'enrico',
-'last': 'fermi',
-}
+    'username': 'efermi',
+    'first': 'enrico',
+    'last': 'fermi',
+    }
 
 for key, value in user_0.items():
     print("\nKey: " + key)
@@ -1055,11 +1055,11 @@ Value: efermi
                     <div class="fragment">
                         <pre><code class="hljs" data-trim contenteditable>
 favorite_languages = {
-'jen': 'python',
-'sarah': 'c',
-'edward': 'ruby',
-'phil': 'python',
-}
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'phil': 'python',
+    }
 
 for name in favorite_languages.keys():
     print(name.title())
@@ -1075,11 +1075,11 @@ Edward
                     <div class="fragment">
                         <pre><code class="hljs" data-trim contenteditable>
 favorite_languages = {
-'jen': 'python',
-'sarah': 'c',
-'edward': 'ruby',
-'phil': 'python',
-}
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'phil': 'python',
+    }
 friends = ['phil', 'sarah']
 for name in favorite_languages.keys():
     print(name.title())
