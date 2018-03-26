@@ -3,7 +3,9 @@
 水平参差不齐，操作命令行和文本的区别
 搞数据用anaconda模块的使用，程序+解释器，原版Python有啥区别，其他promptJupyter
 怎么用这个PPT，ESC，Alt
-寒假作业，Markdown，typora，非要用word，word排版艺术
+寒假作业，Markdown，typora，非要用word，word排版艺术，一部分人用excel，一部分人用ppt
+tuples 整容，林志玲
 交互式编程，脚本式编程
-不能打开spyder的问题
+不能打开spyder的问题，环境变量
 List 返回值
+怎么看书，幸福吗？

@@ -35,7 +35,7 @@
                 <section>
                     <h3>The while statement</h3>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable >
+                        <pre><code class="line-numbers" data-trim contenteditable >
 n = 5
 while n > 0:
     print(n)
@@ -74,7 +74,7 @@ print('Blastoff!')
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 n = 10
 while True:
     print(n)
@@ -98,7 +98,7 @@ print('Done!')
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 while True:
     line = input('>')
     if line == 'done':
@@ -113,7 +113,7 @@ print('Done!')
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 while True:
     line = input('> ')
     if line[0] == '#':
@@ -130,7 +130,7 @@ print('Done!')
                         <li>Example</li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 number=None
 numbers = [12,37,5,42,8,3]
 even = []
@@ -153,7 +153,7 @@ print(odd)
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 a = int(input('Enter your first number:'))
 b = int(input('Enter your first number:'))
 if a >= b:
@@ -183,7 +183,7 @@ print(x)
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 friends = ['Joseph', 'Glenn', 'Sally']
 for friend in friends: #You can use any other variable name other than friend.
     print('Happy New Year:', friend)
@@ -215,7 +215,7 @@ Done!
                 <section>
                     <h3>Counting and summing loops</h3>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 count = 0
 for itervar in [3, 41, 12, 9, 74, 15]:
     count = count + 1
@@ -238,7 +238,7 @@ print('Count: ', count)
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 total = 0
 for itervar in [3, 41, 12, 9, 74, 15]:
     total = total + itervar
@@ -258,7 +258,7 @@ print('Total: ', total)
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 largest = None
 print('Before:', largest)
 for itervar in [3, 41, 12, 9, 74, 15]:
@@ -269,7 +269,7 @@ print('Largest:', largest)
 </code></pre>
                     </div>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 Before: None
 Loop: 3 3
 Loop: 41 41
@@ -310,7 +310,7 @@ Largest: 74
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 friends = ['Joseph', 'Glenn', 'Sally']
 for friend in friends: #You can use any other variable name other than friend.
 print('Happy New Year:', friend)
@@ -330,7 +330,7 @@ IndentationError: expected an indented block
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 friends = ['Joseph', 'Glenn', 'Sally']
 for friend in friends: 
     print('Happy New Year:', friend)
@@ -355,7 +355,7 @@ Looking forward to seeing you, Sally
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 message = "Hello Python world!"
     print(message)
 
@@ -372,7 +372,7 @@ IndentationError: unexpected indent
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 friends = ['Joseph', 'Glenn', 'Sally']
 for friend in friends: 
     print('Happy New Year:', friend)
@@ -397,7 +397,7 @@ Looking forward to seeing you!
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 for value in range(1,5): 
     print(value)
 
@@ -408,14 +408,14 @@ for value in range(1,5):
 </code></pre>
                     </div>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 type(range(1,5))
 
 range
 </code></pre>
                     </div>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 numbers = list(range(1,6)) #list() creates an empty list.
 print(numbers)
 
@@ -425,7 +425,7 @@ print(numbers)
                 </section>
                 <section>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 total=0
 for value in range(1,101):
     total=value+total
@@ -438,7 +438,7 @@ print(total)
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 even_numbers = list(range(2,11,2))
 print(even_numbers)
 
@@ -446,7 +446,7 @@ print(even_numbers)
 </code></pre>
                     </div>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 squares = []
 for value in range(1,11):
     square = value**2
@@ -471,7 +471,7 @@ print(squares)
                             <p>A string is a sequence of characters. You can access the characters one at a time with the bracket operator:</p>
                         </li>
                         <div class="fragment">
-                            <pre><code class="hljs" data-trim contenteditable>
+                            <pre><code class="line-numbers" data-trim contenteditable>
 >>> fruit = 'banana'
 >>> letter = fruit[1]
 >>> print(letter)
@@ -485,7 +485,7 @@ a
                             <p>Traversal through a string with a loop</p>
                         </li>
                         <div class="fragment">
-                            <pre><code class="hljs" data-trim contenteditable>
+                            <pre><code class="line-numbers" data-trim contenteditable>
 fruit = 'banana'
 index = 0
 while index < len(fruit):
@@ -505,7 +505,7 @@ for char in fruit:
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 >>> s = 'Monty Python'
 >>> print(s[0:5])
 Monty
@@ -514,7 +514,7 @@ Python
 </code></pre>
                     </div>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 >>> fruit = 'banana'
 >>> fruit[:3]
 'ban'
@@ -528,14 +528,14 @@ Python
                         <li>Strings are immutable</li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 >>> greeting = 'Hello, world!'
 >>> greeting[0] = 'J'
 TypeError: 'str' object does not support item assignment
 </code></pre>
                     </div>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 >>> greeting = 'Hello, world!'
 >>> new_greeting = 'J' + greeting[1:]
 >>> print(new_greeting)
@@ -546,7 +546,7 @@ Jello, world!
                         <li class="fragment">Looping and counting</li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 word = 'banana'
 count = 0
 for letter in word:
@@ -563,7 +563,7 @@ for letter in word:
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 >>> 'a' in 'banana'
 True
 >>> 'seed' in 'banana'
@@ -577,7 +577,7 @@ False
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 word=input()
 if word < 'banana':
     print('Your word,' + word + ', comes before banana.')
@@ -595,7 +595,7 @@ else:
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 >>> stuff = 'Hello world'
 >>> type(stuff)
 str
@@ -613,7 +613,7 @@ str
 </code></pre>
                     </div>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 >>> help(str.title)
 
 Help on method_descriptor:
@@ -633,7 +633,7 @@ title(...)
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 >>> word = 'banana'
 >>> index = word.find('a') #search for the position of a string in another string
 >>> print(index)
@@ -650,7 +650,7 @@ title(...)
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 >>> line = 'Have a nice day'
 >>> line.startswith('h') #return boolean value
 False
@@ -668,7 +668,7 @@ True
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 >>> data = 'From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008'
 >>> atpos = data.find('@')
 >>> print(atpos)
@@ -690,7 +690,7 @@ uct.ac.za
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 >>> s = 'spam'
 >>> t = list(s)
 >>> print(t)
@@ -703,7 +703,7 @@ uct.ac.za
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 >>> s = 'pining for the fjords'
 >>> t = s.split()
 >>> print(t)
@@ -721,14 +721,14 @@ the
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 >>> camels = 42
 >>> '%d' % camels
 '42'
 </code></pre>
                     </div>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 >>> camels = 42
 >>> 'I have spotted %d camels.' % camels
 'I have spotted 42 camels.'
@@ -742,7 +742,7 @@ the
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 >>> 'In %d years I have spotted %g %s.' % (3, 0.1, 'camels')
 'In 3 years I have spotted 0.1 camels.'
 </code></pre>
@@ -753,7 +753,7 @@ the
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 >>> '%d %d %d' % (1, 2)
 TypeError: not enough arguments for format string
 >>> '%d' % 'dollars'
@@ -764,7 +764,7 @@ TypeError: %d format: a number is required, not str'
                 <section>
                     Debugging
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 while True:
     line = input('> ')
     if line[0] == '#':
@@ -776,7 +776,7 @@ print('Done!')
 </code></pre>
                     </div>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 > hello there
 hello there
 >  #blank
@@ -796,7 +796,7 @@ IndexError: string index out of range
                         <li>Solution</li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 while True:
     line = input('> ')
     if line.startswith('#'): #use startwith method
@@ -808,7 +808,7 @@ print('Done!')
 </code></pre>
                     </div>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 while True:
     line = input('> ')
     if len(line) > 0 and line[0] == '#': # length>0
@@ -856,7 +856,7 @@ print('Done!')
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 >>> eng2sp = dict() #This is False
 >>> print(eng2sp)
 {}
@@ -868,7 +868,7 @@ print('Done!')
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 >>> eng2sp['one'] = 'uno'
 >>> print(eng2sp)
 {'one': 'uno'}
@@ -882,7 +882,7 @@ print('Done!')
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 >>> eng2sp = {'one': 'uno', 'two': 'dos', 'three': 'tres'}
 >>> print(eng2sp)
 {'one': 'uno', 'three': 'tres', 'two': 'dos'}
@@ -896,7 +896,7 @@ print('Done!')
                             <p>The len function works on dictionaries; it returns the number of key-value pairs:</p>
                         </li>
                         <div class="fragment">
-                            <pre><code class="hljs" data-trim contenteditable>
+                            <pre><code class="line-numbers" data-trim contenteditable>
 >>> eng2sp = {'one': 'uno', 'two': 'dos', 'three': 'tres'}
 >>> len(eng2sp)
 3
@@ -906,7 +906,7 @@ print('Done!')
                             <p>The in operator works on dictionaries. (<b>keys</b>)</p>
                         </li>
                         <div class="fragment">
-                            <pre><code class="hljs" data-trim contenteditable>
+                            <pre><code class="line-numbers" data-trim contenteditable>
 >>> eng2sp = {'one': 'uno', 'two': 'dos', 'three': 'tres'}
 >>> 'one' in eng2sp
 True
@@ -923,7 +923,7 @@ False
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 alien_0 = {'color': 'green', 'points': 5}
 print(alien_0)
 alien_0['x_position'] = 0
@@ -940,7 +940,7 @@ print(alien_0)
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 alien_0 = {}
 alien_0['color'] = 'green'
 alien_0['points'] = 5
@@ -957,7 +957,7 @@ print(alien_0)
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 alien_0 = {'color': 'green'}
 print("The alien is " + alien_0['color'] + ".")
 alien_0['color'] = 'yellow'
@@ -968,7 +968,7 @@ The alien is now yellow.
 </code></pre>
                     </div>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 alien_0 = {'x_position': 0, 'y_position': 25, 'speed': 'medium'}
 print("Original x-position: " + str(alien_0['x_position']))
 
@@ -994,7 +994,7 @@ New x-position: 2
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 alien_0 = {'color': 'green', 'points': 5}
 print(alien_0)
 del alien_0['points']
@@ -1002,7 +1002,7 @@ print(alien_0)
 </code></pre>
                     </div>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 favorite_languages = {
     'jen': 'python',
     'sarah': 'c',
@@ -1026,7 +1026,7 @@ Sarah's favorite language is C.
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 user_0 = {
     'username': 'efermi',
     'first': 'enrico',
@@ -1053,7 +1053,7 @@ Value: efermi
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 favorite_languages = {
     'jen': 'python',
     'sarah': 'c',
@@ -1073,7 +1073,7 @@ Edward
                 </section>
                 <section>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 favorite_languages = {
     'jen': 'python',
     'sarah': 'c',
@@ -1104,7 +1104,7 @@ Phil
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 favorite_languages = {
     'jen': 'python',
     'sarah': 'c',
@@ -1128,7 +1128,7 @@ Sarah, thank you for taking the poll.
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 favorite_languages = {
     'jen': 'python',
     'sarah': 'c',
@@ -1154,7 +1154,7 @@ Ruby
                         <li>What will happen if there are repeated keys?</li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="line-numbers" data-trim contenteditable>
 favorite_languages = {
     'jen': 'python',
     'sarah': 'c',
@@ -1168,7 +1168,6 @@ c
                     </div>
                 </section>
             </section>
-           
             <section>
                 <section data-background="#2c3e50" style="color: white; text-align: left;">
                     <h2 style="color: white">Summary</h2>
@@ -1319,7 +1318,8 @@ c
             { src: 'plugin/notes/notes.js', async: true },
 
             // MathJax
-            { src: 'plugin/math/math.js', async: true }
+            { src: 'plugin/math/math.js', async: true },
+            { src: 'plugin/line-numbers/line-numbers.js' }
         ]
     });
     </script>
