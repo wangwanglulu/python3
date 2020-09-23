@@ -25,23 +25,38 @@
         <div class="slides">
             <section data-background-video="bgm.mp4" data-background-video-loop data-background-video-muted style="text-align: left;">
                 <h2 style="color: white">Python Programming</h2>
-                <h5 style="color: white">Lecture 3 Iteration, Strings</h5>
+                <h5 style="color: white">Lecture 3 Iteration</h5>
             </section>
             <section>
                 <section data-background="#2980b9" style="color: white">
                     <h2 style="color: white">3.1 Iteration (1)</h2>
-                    <p style="color: white">1+2+3+...+100=?</p>
+                    <h5 style="color: white">1+2+3+...+100=?</h5>
                 </section>
                 <section>
                     <h3>The while statement</h3>
-                    <div class="fragment">
-                        <pre><code class="line-numbers" data-trim contenteditable >
+                    <div class="div-a">
+                        <div class="fragment">
+                            <pre><code class="line-numbers" data-trim contenteditable >
 n = 5
 while n > 0:
     print(n)
     n = n - 1
 print('Blastoff!')
+
 </code></pre>
+                        </div>
+                    </div>
+                    <div class="div-b">
+                        <div class="fragment">
+                            <pre><code class="output" data-trim contenteditable >
+5
+4
+3
+2
+1
+Blastoff!
+</code></pre>
+                        </div>
                     </div>
                     <ol>
                         <li class="fragment">
@@ -100,7 +115,7 @@ print('Done!')
                     <div class="fragment">
                         <pre><code class="line-numbers" data-trim contenteditable>
 while True:
-    line = input('>')
+    line = input('Please enter:')
     if line == 'done':
         break
     print(line)
@@ -115,8 +130,8 @@ print('Done!')
                     <div class="fragment">
                         <pre><code class="line-numbers" data-trim contenteditable>
 while True:
-    line = input('> ')
-    if line[0] == '#':
+    line = input('Please enter:')
+    if line == '#':
         continue
     if line == 'done':
         break
@@ -127,74 +142,74 @@ print('Done!')
                 </section>
                 <section>
                     <ul>
-                        <li>
-                            <p>Example 1: classify a list of numbers</p>
-                        </li>
+                        <li>Example 1: Even and Odd</li>
                     </ul>
                     <div class="fragment">
                         <pre><code class="line-numbers" data-trim contenteditable>
-number=None
 numbers = [12,37,5,42,8,3]
 even = []
 odd = []
 while len(numbers)>0:
-    number = numbers.pop()
-    if (number%2==0):
-        even.append(number)
+    x = numbers.pop()
+    if (x%2==0):
+        even.append(x)
     else:
-        odd.append(number)
+        odd.append(x)
 print(even)
 print(odd)
 </code></pre>
                     </div>
-                </section>
-                <section>
-                    <ul>
-                        <li class="fragment">
-                            <p>Example 2: Greatest common divisor</p>
-                        </li>
-                    </ul>
                     <div class="fragment">
-                        <pre><code class="line-numbers" data-trim contenteditable>
-a = int(input('Enter your first number:'))
-b = int(input('Enter your first number:'))
-if a >= b:
-    x = a
-    y = b
-else:
-    x = b
-    y = a
-while y!=0:
-    r = y
-    y = x%y
-    x = r
-print(x)
+                        <pre><code class="output" data-trim contenteditable>
+[8, 42, 12]
+[3, 5, 37]
 </code></pre>
                     </div>
-                    <ul>
-                        <li class="fragment">
-                            <p>Least common multiple?</p>
-                        </li>
-                    </ul>
                 </section>
                 <section>
                     <ul>
-                        <li class="fragment">
-                            <p>Example 3: Finding prime numbers</p>
-                        </li>
+                        <li>Example 2: BMI Calculator Pro</li>
                     </ul>
                     <div class="fragment">
                         <pre><code class="line-numbers" data-trim contenteditable>
-i = 2
-while i < 100:
-    j = 2
-    while j <= (i/j):
-        if not i%j : 
-            break
-        j = j + 1
-    if j > i/j: 
-        print(i)
-    i = i + 1
+print("BMI指数计算器\n")
+x = 1
+y = 1
+while x:
+    inp_1 = input('请输入您的体重(kg):\n')
+    try:
+        weight = float(inp_1)
+        x = 0
+    except:
+        print('请输入数字')
+</code></pre>
+                    </div>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable>
+while y:
+    inp_2 = input('请输入您的身高(cm):\n')
+    try:
+        height = float(inp_2)
+        y = 0
+    except:
+        print('请输入数字')
+</code></pre>
+                    </div>
+                </section>
+                <section>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable>
+BMI = weight/(height/100)**2
+if BMI<18.5:
+    print("您的体型偏瘦")
+elif BMI<24 and BMI>=18.5:
+    print("您的体型正常")
+elif BMI<28 and BMI>=24:
+    print("您的体型偏胖")
+elif BMI<32 and BMI>=28:
+    print("您的体型肥胖")
+elif BMI>=32:
+    print("您的体型过于肥胖")
 </code></pre>
                     </div>
                 </section>
@@ -205,41 +220,39 @@ while i < 100:
                             <p><b>for</b> statement works on the lists.</p>
                         </li>
                     </ul>
-                    <div class="fragment">
-                        <pre><code class="line-numbers" data-trim contenteditable>
+                    <div class="div-a">
+                        <div class="fragment">
+                            <pre><code class="line-numbers" data-trim contenteditable>
 friends = ['Joseph', 'Glenn', 'Sally']
-for x in friends: 
-    print('Happy New Year:', x)
+for friend in friends: 
+    print('Happy New Year:', friend)
 print('Done!')
-
-#output
+</code></pre>
+                        </div>
+                    </div>
+                    <div class="div-b">
+                        <div class="fragment">
+                            <pre><code class="output" data-trim contenteditable>
 Happy New Year: Joseph
 Happy New Year: Glenn
 Happy New Year: Sally
 Done!
 </code></pre>
+                        </div>
                     </div>
                     <ul>
                         <li class="fragment">
                             <p>We call the while statement an indefinite loop because it simply loops until some condition becomes False, whereas the for loop is looping through a known set of items so it runs through as many iterations as there are items in the set.</p>
                         </li>
                         <li class="fragment">
-                            <p>In particular, <b>x</b> is the iteration variable for the for loop. The variable <b>x</b> changes for each iteration of the loop and controls when the for loop completes. The iteration variable steps successively through the three strings stored in the friends variable.</p>
+                            <p>In particular, friend is the iteration variable for the for loop. The variable friend changes for each iteration of the loop and controls when the for loop completes. The iteration variable steps successively through the three strings stored in the friends variable.</p>
                         </li>
-                    </ul>
-                </section>
-                <section>
-                    <h3>Loop patterns</h3> These loops are generally constructed by:
-                    <ul>
-                        <li>Initializing one or more variables before the loop starts</li>
-                        <li>Performing some computation on each item in the loop body, possibly changing the variables in the body of the loop</li>
-                        <li>Looking at the resulting variables when the loop completes</li>
                     </ul>
                 </section>
                 <section>
                     <ul>
                         <li class="fragment">
-                            <p>The concept of looping is important because it's one of the most common ways a computer automates repetitive tasks.</p>
+                            <p>The concept of looping is important because it is one of the most common ways a computer automates repetitive tasks.</p>
                         </li>
                         <li class="fragment">
                             <p><b>The indentation errors are common.</b></p>
@@ -254,75 +267,66 @@ Done!
                     <div class="fragment">
                         <pre><code class="line-numbers" data-trim contenteditable>
 friends = ['Joseph', 'Glenn', 'Sally']
-for friend in friends: 
-print('Happy New Year:', friend)
+for x in friends: 
+print('Happy New Year:', x)
 print('Done!')
-
-#output
+</code></pre>
+                    </div>
+                    <div class="fragment">
+                        <pre><code class="error" data-trim contenteditable>
 IndentationError: expected an indented block
+</code></pre>
+                    </div>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable>
+message = "Hello Python world!"
+    print(message)
+</code></pre>
+                    </div>
+                    <div class="fragment">
+                        <pre><code class="error" data-trim contenteditable>
+IndentationError: unexpected indent
 </code></pre>
                     </div>
                 </section>
                 <section>
                     <ul>
                         <li class="fragment">
-                            <p>Forgetting to indent additional lines</p>
+                            <p>Forgetting to indent additional lines (logical error)</p>
                         </li>
                     </ul>
                     <div class="fragment">
                         <pre><code class="line-numbers" data-trim contenteditable>
 friends = ['Joseph', 'Glenn', 'Sally']
-for friend in friends: 
-    print('Happy New Year:', friend)
-print('Looking forward to seeing you,', friend)
-
-#output
+for x in friends: 
+    print('Happy New Year:', x)
+print('Looking forward to seeing you,', x)
+</code></pre>
+                    </div>
+                    <div class="fragment">
+                        <pre><code class="output" data-trim contenteditable>
 Happy New Year: Joseph
 Happy New Year: Glenn
 Happy New Year: Sally
 Looking forward to seeing you, Sally
 </code></pre>
                     </div>
-                    <ul>
-                        <li class="fragment">
-                            <p>This is a logical error.</p>
-                        </li>
-                    </ul>
-                </section>
-                <section>
-                    <ul>
-                        <li class="fragment">
-                            <p>Indenting unnecessarily</p>
-                        </li>
-                    </ul>
-                    <div class="fragment">
-                        <pre><code class="line-numbers" data-trim contenteditable>
-message = "Hello Python world!"
-    print(message)
-
-#output
-IndentationError: unexpected indent
-</code></pre>
-                    </div>
-                    <ul>
-                        <li class="fragment">
-                            <p>Indenting unnecessarily after the loop</p>
-                        </li>
-                    </ul>
                     <div class="fragment">
                         <pre><code class="line-numbers" data-trim contenteditable>
 friends = ['Joseph', 'Glenn', 'Sally']
-for friend in friends: 
-    print('Happy New Year:', friend)
-    print('Looking forward to seeing you!')
-
-#output
+for x in friends: 
+    print('Happy New Year:', x)
+    print('Looking forward to seeing you,', x)
+</code></pre>
+                    </div>
+                    <div class="fragment">
+                        <pre><code class="output" data-trim contenteditable>
 Happy New Year: Joseph
-Looking forward to seeing you!
+Looking forward to seeing you, Joseph
 Happy New Year: Glenn
-Looking forward to seeing you!
+Looking forward to seeing you, Glenn
 Happy New Year: Sally
-Looking forward to seeing you!
+Looking forward to seeing you, Sally
 </code></pre>
                     </div>
                 </section>
@@ -339,67 +343,65 @@ Looking forward to seeing you!
                         <li class="fragment">
                             <p>First, we need to generate a series of numbers in a list.</p>
                         </li>
-                    </ul>
-                    <div class="fragment">
-                        <pre><code class="line-numbers" data-trim contenteditable>
+                        <div class="fragment">
+                            <pre><code class="line-numbers" data-trim contenteditable>
 for value in range(1,5): 
     print(value)
-
-#output
+</code></pre>
+                        </div>
+                        <div class="fragment">
+                            <pre><code class="output" data-trim contenteditable>
 1
 2
 3
 4
 </code></pre>
-                    </div>
-                    <div class="fragment">
-                        <pre><code class="line-numbers" data-trim contenteditable>
-type(range(1,5))
-
-#output
+                        </div>
+                        <div class="fragment">
+                            <pre><code class="line-numbers" data-trim contenteditable>
+>>> type(range(1,5))
 range
 </code></pre>
-                    </div>
-                    <div class="fragment">
-                        <pre><code class="line-numbers" data-trim contenteditable>
-numbers = list(range(1,6))
-print(numbers)
-
-#output
-[1, 2, 3, 4, 5]
-</code></pre>
-                    </div>
+                        </div>
+                    </ul>
                 </section>
                 <section>
                     <div class="fragment">
                         <pre><code class="line-numbers" data-trim contenteditable>
-numbers = list(range(6))
-print(numbers)
-
-#output
+>>> numbers = list(range(1,6)) 
+#list() creates an empty list.
+>>> print(numbers)
+[1, 2, 3, 4, 5]
+</code></pre>
+                    </div>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable>
+>>> numbers = list(range(6))
+>>> print(numbers)
 [0, 1, 2, 3, 4, 5]
 </code></pre>
                     </div>
                     <div class="fragment">
                         <pre><code class="line-numbers" data-trim contenteditable>
-numbers = list(range(1, 10, 2))
-print(numbers)
-
-#output
+>>> numbers = list(range(1, 10, 2))
+>>> print(numbers)
 [1, 3, 5, 7, 9]
 </code></pre>
                     </div>
                     <div class="fragment">
                         <pre><code class="line-numbers" data-trim contenteditable>
-numbers = list(range(10, 1, -2))
-print(numbers)
-
-#output
+>>> numbers = list(range(10, 1, -2))
+>>> print(numbers)
 [10, 8, 6, 4, 2]
 </code></pre>
                     </div>
                 </section>
                 <section>
+                    <ul>
+                        <li class="fragment">
+                            <p>1+2+3+...+100</p>
+                        </li>
+                    </ul>
                     <div class="fragment">
                         <pre><code class="line-numbers" data-trim contenteditable>
 total=0
@@ -417,8 +419,10 @@ print(total)
                         <pre><code class="line-numbers" data-trim contenteditable>
 even_numbers = list(range(2,11,2))
 print(even_numbers)
-
-#output
+</code></pre>
+                    </div>
+                    <div class="fragment">
+                        <pre><code class="output" data-trim contenteditable>
 [2, 4, 6, 8, 10]
 </code></pre>
                     </div>
@@ -429,47 +433,62 @@ for value in range(1,11):
     square = value**2
     squares.append(square)
 print(squares)
-
-#output
+</code></pre>
+                    </div>
+                    <div class="fragment">
+                        <pre><code class="output" data-trim contenteditable>
 [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 </code></pre>
                     </div>
                 </section>
                 <section>
-                    <p>Example 1: len()</p>
+                    <ul>
+                        <li>
+                            <p>Example 1: len()</p>
+                        </li>
+                    </ul>
                     <div class="fragment">
                         <pre><code class="line-numbers" data-trim contenteditable>
 count = 0
-for itervar in [3, 41, 12, 9]:
+for x in [3, 41, 12, 9]:
     count = count + 1
 print('Count: ', count)
 </code></pre>
                     </div>
-                    <p>Example 2: sum()</p>
+                    <ul>
+                        <li>
+                            <p class="fragment">Example 2: sum()</p>
+                        </li>
+                    </ul>
                     <div class="fragment">
                         <pre><code class="line-numbers" data-trim contenteditable>
 total = 0
-for itervar in [3, 41, 12, 9]:
-    total = total + itervar
+for x in [3, 41, 12, 9]:
+    total = total + x
 print('Total: ', total)
 </code></pre>
                     </div>
                 </section>
                 <section>
-                    <p>Example 3: max(), min()</p>
+                    <ul>
+                        <li>
+                            <p class="fragment">Example 3: max(), min()</p>
+                        </li>
+                    </ul>
                     <div class="fragment">
                         <pre><code class="line-numbers" data-trim contenteditable>
 largest = None
-for itervar in [3, 41, 12, 9, 74, 15]:
-    if largest is None or itervar > largest :
+for x in [3, 41, 12, 9, 74, 15]:
+    if largest is None or x > largest :
             largest = itervar
 print('Largest:', largest)
-
-#output
-Largest: 74
 </code></pre>
                     </div>
-                    <p>Example 4: .reverse()</p>
+                    <ul>
+                        <li>
+                            <p class="fragment">Example 4: .reverse()</p>
+                        </li>
+                    </ul>
                     <div class="fragment">
                         <pre><code class="line-numbers" data-trim contenteditable>
 reverselist = []
@@ -479,36 +498,23 @@ x = [3, 41, 12, 9, 74, 15]
 for itervar in x:
     count = count + 1
 for i in range(count-1, -1, -1):
-    reverselist = reverselist + [x[i]]
+    reverselist.append(x[i])
 print(reverselist)
-
-#output
+</code></pre>
+                    </div>
+                    <div class="fragment">
+                        <pre><code class="output" data-trim contenteditable>
 [15, 74, 9, 12, 41, 3]
 </code></pre>
                     </div>
                     <ul>
                         <li class="fragment">
-                            <p>Sorting is a much more complicated and interesting topic. We will study that at a later time.</p>
+                            <p>Sorting is a much more complicated and interesting topic.</p>
                         </li>
                     </ul>
                 </section>
                 <section>
                     <h3>Nested Loops</h3>
-                    <div class="fragment">
-                        <pre><code class="line-numbers" data-trim contenteditable>
-for iterating_var in sequence:
-   for iterating_var in sequence:
-      statements(s)
-   statements(s)
-
-while expression:
-   while expression:
-      statement(s)
-   statement(s)
-</code></pre>
-                    </div>
-                </section>
-                <section>
                     <div class="fragment">
                         <pre><code class="line-numbers" data-trim contenteditable>
 x = []
@@ -517,21 +523,25 @@ for i in range(1,4):
     for j in range(1,4):
         x[i-1].append(1)
 print(x)
-
-#output
+</code></pre>
+                    </div>
+                    <div class="fragment">
+                        <pre><code class="output" data-trim contenteditable>
 [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
 </code></pre>
                     </div>
                     <div class="fragment">
                         <pre><code class="line-numbers" data-trim contenteditable>
 x = []
-for i in range(1,4):
+for i in range(1,6):
     x.append([])
     for j in range(1,i+1):
         x[i-1].append(1)
 print(x)
-
-#output
+</code></pre>
+                    </div>
+                    <div class="fragment">
+                        <pre><code class="output" data-trim contenteditable>
 [[1], [1, 1], [1, 1, 1]]
 </code></pre>
                     </div>
@@ -546,18 +556,21 @@ for i in range(1,4):
 </code></pre>
                     </div>
                     <div class="fragment">
-                        <pre><code class="line-numbers" data-trim contenteditable>
-#output
+                        <pre><code class="output" data-trim contenteditable>
 1 
 2 2 
-3 3 3 
+3 3 3  
 </code></pre>
                     </div>
                     <ul>
-                        <li class="fragment">
-                            <p>The default value of end is \n meaning that after the print statement it will print a new line. So simply stated end is what you want to be printed after the print statement has been executed.</p>
-                        </li>
+                        <li class="fragment"><b>The default value of end is \n meaning that after the print statement it will print a new line. So simply stated end is what you want to be printed after the print statement has been executed</b></li>
                     </ul>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable>
+>>> print("hello",end="+")
+hello+
+</code></pre>
+                    </div>
                     <div class="fragment">
                         <pre><code class="line-numbers" data-trim contenteditable>
 for i in range(1,4):
@@ -567,8 +580,7 @@ for i in range(1,4):
 </code></pre>
                     </div>
                     <div class="fragment">
-                        <pre><code class="line-numbers" data-trim contenteditable>
-#output
+                        <pre><code class="output" data-trim contenteditable>
 1+
 2+2+
 3+3+3+
@@ -578,375 +590,148 @@ for i in range(1,4):
             </section>
             <section>
                 <section data-background="#2980b9" style="color: white">
-                    <h2 style="color: white">3.3 Strings</h2>
+                    <h2 style="color: white">3.3 Easy Money Tracker (简易记账本)</h2>
+                </section>
+                <section>
+                    <h3>Targets:</h3>
+                    <ul>
+                        <li class="fragment">1. Record the expenses on transportation and food in September</li>
+                        <li class="fragment">2. Require users to enter each expense one by one</li>
+                        <li class="fragment">3. Report the total expense</li>
+                    </ul>
+                    <ul>
+                        <li class="fragment">
+                            <p>Step 1: Create a list containing the dates</p>
+                        </li>
+                    </ul>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable>
+
+print("简易记账本（九月）")
+Sept=[]
+for date in range(20200901,20200931):
+    Sept.append([date,0])
+print()
+</code></pre>
+                    </div>
                 </section>
                 <section>
                     <ul>
                         <li class="fragment">
-                            <p>We have learned some methods of strings: .upper(), lower(), .title(), .lstrip(), .rstrip(), .strip()</p>
+                            <p>Step 2: User enters the date for recording</p>
                         </li>
-                        <li class="fragment">
-                            <p>A string is a sequence of characters. The elements of a string are characters. Empty string ''. You can access the characters one at a time with the bracket operator:</p>
-                        </li>
-                        <div class="fragment">
-                            <pre><code class="line-numbers" data-trim contenteditable>
->>> fruit = 'banana'
->>> letter = fruit[1]
->>> print(letter)
-a
-
->>> len(fruit)
-6
+                    </ul>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable>
+option=input("请问要输入几号的开销？")
+day=int(option)-1
+Sept[day][1]=1
 </code></pre>
-                        </div>
+                    </div>
+                    <ul>
                         <li class="fragment">
-                            <p>iteration and conditional execution</p>
+                            <p>Step 3: Enter the expenses one by one</p>
                         </li>
-                        <div class="fragment">
-                            <pre><code class="line-numbers" data-trim contenteditable>
-fruit = 'banana'
-index = 0
-while index < len(fruit):
-    letter = fruit[index]
-    print(letter)
-    index = index + 1
-
-for char in fruit:
-    print(char)
+                    </ul>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable>
+Transportation=[]
+print("请输入每一笔的交通费开销，结束请输入ok")
+n=1
+while n!=0:
+    T_expense=input("第"+str(n)+"笔:")
+    if T_expense == "ok":
+        n=0
+    else: 
+        Transportation.append(float(T_expense))
+        n=n+1
+    print("记录成功")
 </code></pre>
-                        </div>
+                    </div>
                 </section>
                 <section>
-                    <p>Debugging</p>
+                    <ul>
+                        <li class="fragment">Do the same thing for food</li>
+                    </ul>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable>
+Food=[]
+print("请输入每一笔的餐饮开销，结束请输入ok")
+m=1
+while m!=0:
+    F_expense=input("第"+str(m)+"笔:")
+    if F_expense == "ok":
+        m=0
+    else: 
+        Food.append(float(F_expense))
+        m=m+1
+    print("记录成功")
+</code></pre>
+                    </div>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable>
+Sept[day].append(sum(Transportation))
+Sept[day].append(sum(Food))
+</code></pre>
+                    </div>
+                </section>
+                <section>
+                    <ul>
+                        <li class="fragment">Step 4: Calculate the total</li>
+                    </ul>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable>
+Transportation_total=0
+Food_total=0
+for each_day in Sept:
+    if each_day[1]==1:
+        Transportation_total=Transportation_total+each_day[2]
+        Food_total=Food_total+each_day[3]
+print()
+print("本月开销汇总报告")
+print("交通费："+str(Transportation_total))
+print("餐饮费："+str(Food_total))
+</code></pre>
+                    </div>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Improvement: Multiple days</h3>
+                    <h5>Improve Step 2: Nested loops</h5>
                     <div class="fragment">
                         <pre><code class="line-numbers" data-trim contenteditable>
 while True:
-    line = input('> ')
-    if line[0] == '#':
-        continue
-    if line == 'done':
+    option=input("请问要输入几号的开销？如果结束请输入ok: ")
+    if option=="ok":
         break
-    print(line)
-print('Done!')
+    else:
+        # all the programs in Step 3
 </code></pre>
                     </div>
-                    <div class="fragment">
-                        <pre><code class="line-numbers" data-trim contenteditable>
-> hello there
-hello there
->  #blank
- #blank
-> print this!
-print this!
->
-Traceback (most recent call last):
-File "copytildone.py", line 3, in &lt;module&gt;
-if line[0] == '#':
-IndexError: string index out of range
-</code></pre>
-                    </div>
+                    <p class="fragment"><b>indentation: select programs, tab (or space)</b></p>
+                    <p class="fragment"><b>cancel indentation: select programs, shift + tab</b></p>
                 </section>
                 <section>
+                    <h3>Practice</h3>
                     <ul>
-                        <li>Solution</li>
-                    </ul>
-                    <div class="fragment">
-                        <pre><code class="line-numbers" data-trim contenteditable>
-while True:
-    line = input('> ')
-    if line.startswith('#'): 
-        continue
-    if line == 'done':
-        break
-    print(line)
-print('Done!')
-</code></pre>
-                    </div>
-                    <div class="fragment">
-                        <pre><code class="line-numbers" data-trim contenteditable>
-while True:
-    line = input('> ')
-    if len(line) > 0 and line[0] == '#': 
-        continue
-    if line == 'done':
-        break
-    print(line)
-print('Done!')
-</code></pre>
-                    </div>
-                </section>
-                <section>
-                    <ul>
-                        <li>
-                            <p>String slices</p>
+                        <li class="fragment">Display the food expenses on each day</li>
+                        <li class="fragment">For example, we have entered
+                            <ul>
+                                <li class="fragment">9-1, total transportation: 200, total food: 100
+                                </li>
+                                <li class="fragment">9-2, total transportation: 150, total food: 150
+                                </li>
+                                <li class="fragment">The output is shown below
+                                </li>
                         </li>
                     </ul>
                     <div class="fragment">
-                        <pre><code class="line-numbers" data-trim contenteditable>
->>> fruit = 'banana'
->>> fruit[1:3]
-'an'
->>> fruit[3:]
-'ana'
+                        <pre><code class="output" data-trim contenteditable>
+9月具体餐饮开支信息:
+9-1  100
+9-2  150
 </code></pre>
                     </div>
-                    <ul>
-                        <li class="fragment">
-                            <p>Strings are immutable</p>
-                        </li>
-                    </ul>
-                    <div class="fragment">
-                        <pre><code class="line-numbers" data-trim contenteditable>
->>> greeting = 'Hello, world!'
->>> greeting[0] = 'J'
-TypeError: 'str' object does not 
-support item assignment
-</code></pre>
-                    </div>
-                    <ul>
-                        <li class="fragment">
-                            <p>The in operator</p>
-                        </li>
-                    </ul>
-                    <div class="fragment">
-                        <pre><code class="line-numbers" data-trim contenteditable>
->>> 'a' in 'banana'
-True
->>> 'seed' in 'banana'
-False
-</code></pre>
-                    </div>
-                </section>
-                <section>
-                    <ul>
-                        <li class="fragment">
-                            <p>Some useful string methods</p>
-                        </li>
-                    </ul>
-                    <div class="fragment">
-                        <pre><code class="line-numbers" data-trim contenteditable>
->>> stuff = 'Hello world'
->>> dir(stuff)
-</code></pre>
-                    </div>
-                    <div class="fragment">
-                        <pre><code class="line-numbers" data-trim contenteditable>
-['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__',
- '__eq__', '__format__','__ge__', '__getattribute__', '__getitem__', '__getnewargs__', 
- '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__',
- '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__',
- '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__',
- '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 
- 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 
- 'isalnum', 'isalpha', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 
- 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust',
- 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 
- 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith',
- 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
-</code></pre>
-                    </div>
-                    <div class="fragment">
-                        <pre><code class="line-numbers" data-trim contenteditable>
->>> help(str.title)
-
-Help on method_descriptor:
-
-title(...)
-    S.title() -> str
-    
-    Return a titlecased version of S, i.e. words start with title case
-    characters, all remaining cased characters have lower case.
-</code></pre>
-                    </div>
-                </section>
-                <section>
-                    <ul>
-                        <li class="fragment">
-                            <p><b>.find()</b> searches for the position of a string in another string</p>
-                        </li>
-                    </ul>
-                    <div class="fragment">
-                        <pre><code class="line-numbers" data-trim contenteditable>
->>> word = 'banana'
->>> index = word.find('a')
->>> print(index)
-1
->>> word.find('na')
-2
->>> word.find('na', 3)
-4
-</code></pre>
-                    </div>
-                    <ul>
-                        <li class="fragment">
-                            <p><b>.startwith()</b> returns the boolean value</p>
-                        </li>
-                    </ul>
-                    <div class="fragment">
-                        <pre><code class="line-numbers" data-trim contenteditable>
->>> line = 'Have a nice day'
->>> line.startswith('h') 
-False
->>> line.lower()
-'have a nice day'
->>> line.lower().startswith('h')
-True
-</code></pre>
-                    </div>
-                </section>
-                <section>
-                    <ul>
-                        <li class="fragment">
-                            <p>Parsing strings</p>
-                        </li>
-                    </ul>
-                    <div class="fragment">
-                        <pre><code class="line-numbers" data-trim contenteditable>
->>> data = 'From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008'
->>> atpos = data.find('@')
->>> print(atpos)
-21
->>> sppos = data.find(' ',atpos)
->>> print(sppos)
-31
->>> host = data[atpos+1 : sppos]
->>> print(host)
-uct.ac.za
-</code></pre>
-                    </div>
-                </section>
-                <section>
-                    <ul>
-                        <li class="fragment">
-                            <p><b>.split()</b> break a sentence into words and make a list</p>
-                        </li>
-                    </ul>
-                    <div class="fragment">
-                        <pre><code class="line-numbers" data-trim contenteditable>
->>> s = 'pining for the fjords'
->>> t = s.split()
->>> print(t)
-['pining', 'for', 'the', 'fjords']
->>> print(t[2])
-the
-</code></pre>
-                    </div>
-                    <ul>
-                        <li class="fragment">
-                            <p>One can break a word into letters.</p>
-                        </li>
-                    </ul>
-                    <div class="fragment">
-                        <pre><code class="line-numbers" data-trim contenteditable>
->>> s = 'spam'
->>> t = list(s)
->>> print(t)
-['s', 'p', 'a', 'm']
-</code></pre>
-                    </div>
-                </section>
-                <section>
-                    <ul>
-                        <li class="fragment">
-                            <p>Format operator <b>$%$</b></p>
-                            <p>It allows us to construct strings, replacing parts of the strings with the data stored in variables.</p>
-                        </li>
-                    </ul>
-                    <div class="fragment">
-                        <pre><code class="line-numbers" data-trim contenteditable>
-number = 42
-print('I have spotted %d camels.' % number)
-
-#output
-I have spotted 42 camels.
-</code></pre>
-                    </div>
-                    <ul>
-                        <li class="fragment">
-                            <p>What if we do not use format operator?</p>
-                        </li>
-                    </ul>
-                    <div class="fragment">
-                        <pre><code class="line-numbers" data-trim contenteditable>
-number = 42
-print('I have spotted number camels.') #it is wrong.
-print('I have spotted '+str(number)+' camels.') #not simple
-</code></pre>
-                    </div>
-                </section>
-                <section>
-                    <ul>
-                        <li class="fragment">
-                            <p>If there is more than one format sequence in the string, the second argument has to be a <b>tuple</b>.</p>
-                        </li>
-                    </ul>
-                    <div class="fragment">
-                        <pre><code class="line-numbers" data-trim contenteditable>
-print('In %d years I have spotted %g %s.' % (3, 0.1, 'camels'))
-
-#output
-In 3 years I have spotted 0.1 camels.
-</code></pre>
-                    </div>
-                    <ul>
-                        <li class="fragment">
-                            <p>The number of elements in the tuple must match the number of format sequences in the string. The types of the elements also must match the format sequences:</p>
-                        </li>
-                    </ul>
-                    <div class="fragment">
-                        <pre><code class="line-numbers" data-trim contenteditable>
-'%d %d %d' % (1, 2)
-#output
-TypeError: not enough arguments for format string
-
-'%d' % 'dollars'
-#output
-TypeError: %d format: a number is required, not str'
-</code></pre>
-                    </div>
-                </section>
-                <section>
-                    <ul>
-                        <li>.format()</li>
-                    </ul>
-                    <div class="fragment">
-                        <pre><code class="line-numbers" data-trim contenteditable>
-print('In {} years I have spotted {} {}.' .format(3, 0.1, 'camels'))
-#output
-In 3 years I have spotted 0.1 camels.
-
-print('In {0} years I have spotted {1} {2}.' .format(3, 0.1, 'camels'))
-#output
-In 3 years I have spotted 0.1 camels.
-
-print('In {1} years I have spotted {0} {2}.' .format(3, 0.1, 'camels'))
-#output
-In 0.1 years I have spotted 3 camels.
-</code></pre>
-                    </div>
-                </section>
-                <section>
-                    <h3>String: Summary</h3>
-                    <ul>
-                        <li class="fragment">
-                            <p>The elements of a string are characters. Empty string '' </p>
-                        </li>
-                        <li class="fragment">
-                            <p>Features: Ordered, Immutable, Repeatable</p>
-                        </li>
-                        <li class="fragment">
-                            <p>Index and slice are the same with that of lists.</p>
-                        </li>
-                        <li class="fragment">
-                            <p>in operator shows the boolean value for whether a string contains a given string. </p>
-                        </li>
-                        <li class="fragment">
-                            <p><b>.upper(), lower(), .title(), .lstrip(), .rstrip(), .strip()</b></p>
-                            <p><b>.find(), .startwith(), .split() </b>(list('string') and list())</p>
-                        </li>
-                        <li class="fragment">
-                            <p>Format operator: %d integer, %g float, %s string (use () for more than one format sequence), .format()</p>
-                        </li>
                     </ul>
                 </section>
             </section>
@@ -955,9 +740,8 @@ In 0.1 years I have spotted 3 camels.
                     <h2 style="color: white">Summary</h2>
                     <ul>
                         <li>Iteration</li>
-                        <li>Strings</li>
                         <ul>
-                            <li>Reading: Python for Everybody Chapter 5, 6</li>
+                            <li>Reading: Python for Everybody Chapter 5</li>
                         </ul>
                     </ul>
                 </section>
