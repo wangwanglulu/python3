@@ -480,8 +480,13 @@ print('Total: ', total)
 largest = None
 for x in [3, 41, 12, 9, 74, 15]:
     if largest is None or x > largest :
-            largest = itervar
+            largest = x
 print('Largest:', largest)
+</code></pre>
+                    </div>
+                    <div class="fragment">
+                        <pre><code class="output" data-trim contenteditable>
+Largest: 74
 </code></pre>
                     </div>
                     <ul>
@@ -533,7 +538,7 @@ print(x)
                     <div class="fragment">
                         <pre><code class="line-numbers" data-trim contenteditable>
 x = []
-for i in range(1,6):
+for i in range(1,4):
     x.append([])
     for j in range(1,i+1):
         x[i-1].append(1)
